@@ -1,4 +1,4 @@
-package test;
+package rational;
 
 public class Rational {
 
