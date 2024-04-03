@@ -23,7 +23,7 @@ public class Teacher extends Person {
     public static final String TEACHER_RANK = "teacher_rank";
     public static final String TEACHER_SALARY = "teacher_salary";
 
-    public Teacher(Long id, String firstName, String lastName, Date birthDate, Long teacherId, String degree, Rank rank, double monthlySalary) {
+    public Teacher( String firstName, String lastName, Date birthDate, Long teacherId, String degree, Rank rank, double monthlySalary) {
         super ( firstName, lastName, birthDate );
         this.teacherId = teacherId;
         this.degree = degree;

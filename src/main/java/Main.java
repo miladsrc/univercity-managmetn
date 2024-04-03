@@ -98,7 +98,7 @@ public class Main {
             }
         } catch (InputMismatchException ime) {
             System.out.println ( "Invalid input. Please enter a valid numeric ID." );
-            scanner.nextLine (); // to consume the incorrect input
+            scanner.nextLine ();
         } catch (Exception e) {
             System.out.println ( "An error occurred while checking for teacher existence: " + e.getMessage () );
         }
@@ -114,7 +114,7 @@ public class Main {
             System.out.println ( "Teacher with ID " + id + " was successfully deleted." );
         } catch (InputMismatchException ime) {
             System.out.println ( "Invalid input. Please enter a valid numeric ID." );
-            scanner.nextLine (); // to consume the incorrect input
+            scanner.nextLine ();
         } catch (SQLException sqle) {
             System.out.println ( "A SQL error occurred: " + sqle.getMessage () );
         } catch (Exception e) {
@@ -135,7 +135,7 @@ public class Main {
             }
         } catch (InputMismatchException ime) {
             System.out.println ( "Invalid input. Please enter a valid numeric ID." );
-            scanner.nextLine (); // to consume the incorrect input
+            scanner.nextLine ();
         } catch (ArithmeticException ae) {
             System.out.println ( "Numeric overflow. The ID is too large." );
         } catch (SQLException sqle) {
@@ -262,7 +262,7 @@ public class Main {
         double monthlySalary = scanner.nextDouble ();
         scanner.nextLine ();
 
-        Teacher teacher = new Teacher ( teacherId, firstName, lastName, birthDate, teacherId, degree, rank, monthlySalary );
+        Teacher teacher = new Teacher ( firstName, lastName, birthDate, teacherId, degree, rank, monthlySalary );
         try {
             ApplicationContext.getTeacherService ().save ( teacher );
             System.out.println ( "Teacher added successfully!" );
@@ -346,7 +346,7 @@ public class Main {
             }
         } catch (InputMismatchException ime) {
             System.out.println ( "Invalid input. Please enter a valid numeric ID." );
-            scanner.nextLine (); // to consume the incorrect input
+            scanner.nextLine ();
         } catch (SQLException sqle) {
             System.out.println ( "A SQL error occurred while checking for student existence: " + sqle.getMessage () );
         } catch (Exception e) {
