@@ -105,7 +105,7 @@ public abstract class BaseRepositoryImpl<ID extends Serializable, TYPE extends B
     public List<TYPE> findAll(Class<TYPE> entityClass) {
         Session session = sessionFactory.openSession();
         Query<TYPE> query = session.createQuery("FROM " + entityClass.getName(), entityClass);
-        List<TYPE> entities = (List<TYPE>) ((Query<?>) query).list();
+        List<TYPE> entities = query.list();
         session.close();
         return entities;
     }
